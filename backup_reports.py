@@ -4,55 +4,56 @@ from datetime import datetime
 
 
 def move_files_from_arch_reports(date_str=None):
-    # Jeśli argument nie został podany, użyj dzisiejszej daty
+    # If no argument is provided, use today's date
     if date_str is None:
         date_str = datetime.now().strftime('%Y-%m-%d')
 
-    # Określenie ścieżek do folderów 'arch_reports' i 'reports'
+    # Define paths to the 'arch_reports' and 'reports' folders
     current_directory = os.getcwd()
     arch_reports_folder = os.path.join(current_directory, 'arch_reports')
     reports_folder = os.path.join(current_directory, 'reports')
 
-    # Konwertowanie daty z formatu str na obiekt datetime
+    # Convert the date from string format to a datetime object
     try:
         target_date = datetime.strptime(date_str, '%Y-%m-%d')
     except ValueError:
-        print("Nieprawidłowy format daty. Użyj formatu YYYY-MM-DD.")
+        print("Invalid date format. Use YYYY-MM-DD.")
         return
 
-    # Sprawdzenie, czy folder 'arch_reports' istnieje
+    # Check if the 'arch_reports' folder exists
     if os.path.exists(arch_reports_folder) and os.path.isdir(arch_reports_folder):
-        files_moved = 0  # Zmienna do liczenia przeniesionych plików
+        files_moved = 0  # Counter for moved files
 
-        # Przechodzimy przez wszystkie pliki w folderze 'arch_reports'
+        # Iterate through all files in the 'arch_reports' folder
         for filename in os.listdir(arch_reports_folder):
             file_path = os.path.join(arch_reports_folder, filename)
 
-            # Sprawdzamy, czy to jest plik
+            # Check if it is a file
             if os.path.isfile(file_path):
-                # Pobieramy datę modyfikacji pliku
+                # Get the file modification date
                 file_mod_time = datetime.fromtimestamp(os.path.getmtime(file_path))
 
-                # Sprawdzamy, czy data modyfikacji pliku jest większa lub równa podanej dacie
+                # Check if the file modification date is greater than or equal to the given date
                 if file_mod_time >= target_date:
-                    # Tworzymy ścieżkę docelową w folderze 'reports'
+                    # Create the destination path in the 'reports' folder
                     destination_path = os.path.join(reports_folder, filename)
                     try:
-                        # Przenosimy plik do folderu 'reports'
+                        # Move the file to the 'reports' folder
                         shutil.move(file_path, destination_path)
-                        print(f"Przeniesiono {file_path} do {destination_path}")
-                        files_moved += 1  # Zwiększamy licznik przeniesionych plików
+                        print(f"Moved {file_path} to {destination_path}")
+                        files_moved += 1  # Increment the counter of moved files
                     except Exception as e:
-                        print(f"Nie udało się przenieść pliku {file_path}: {e}")
+                        print(f"Failed to move file {file_path}: {e}")
 
-        # Wyświetlanie komunikatu końcowego
+        # Display the final message
         if files_moved > 0:
-            print(f"Przeniesiono {files_moved} plików.")
+            print(f"Moved {files_moved} files.")
         else:
-            print("Nie przeniesiono żadnego pliku, ponieważ żadna data modyfikacji nie pasowała.")
+            print("No files were moved because no modification date matched.")
     else:
-        print(f"Folder {arch_reports_folder} nie istnieje.")
+        print(f"Folder {arch_reports_folder} does not exist.")
 
 
-# Wywołanie funkcji bez argumentu – użyje dzisiejszej daty
+# Call the function without an argument – it will use today's date
 move_files_from_arch_reports()
+``
