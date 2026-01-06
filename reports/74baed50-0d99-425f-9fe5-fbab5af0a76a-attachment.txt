@@ -1,0 +1,1 @@
+ Assertion - checking if is actived Simple view: - Success (Attempt 1)

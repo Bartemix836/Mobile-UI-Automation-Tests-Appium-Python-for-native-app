@@ -1,0 +1,50 @@
+[Resolve] cmd package MAIN/LAUNCHER -> com.okinc.okex.gp/com.okinc.core.ok_app.homepage.ui.welcome.WelcomeActivity -> com.okinc.core.ok_app.homepage.ui.welcome.WelcomeActivity
+[Request] #1 in the current 1-minute window
+Application com.okinc.okex.gp is running in the background. Switching...
+[Throttle] ⏳ Wait 0.243s, not to exceed the limit.
+[Request] #2 in the current 1-minute window
+Starting step: STEP 1: Change view mode, repetitions: 1
+STEP 1: Change view mode - Attempt 1/1
+STEP 1: Change view mode - Success after attempt 1
+STEP 1: Change view mode - Completed 1 attempts.
+Starting step: STEP 2: Select Simple view, repetitions: 1
+STEP 2: Select Simple view - Attempt 1/1
+STEP 2: Select Simple view - Success after attempt 1
+STEP 2: Select Simple view - Completed 1 attempts.
+Starting step:  Assertion - checking if is actived Simple view:, repetitions: 1
+ Assertion - checking if is actived Simple view: - Attempt 1/1
+ Assertion - checking if is actived Simple view: - Success after attempt 1
+ Assertion - checking if is actived Simple view: - Completed 1 attempts.
+Starting step: STEP 3: Scroll down page 1/3 page, repetitions: 1
+STEP 3: Scroll down page 1/3 page - Attempt 1/1
+Scroll 1: scrolled 7% of the screen height
+Scroll 2: scrolled 7% of the screen height
+Scroll 3: scrolled 7% of the screen height
+Scroll 4: scrolled 7% of the screen height
+Scroll 5: scrolled 7% of the screen height
+STEP 3: Scroll down page 1/3 page - Success after attempt 1
+STEP 3: Scroll down page 1/3 page - Completed 1 attempts.
+Starting step: STEP 4: Select All assests section, repetitions: 1
+STEP 4: Select All assests section - Attempt 1/1
+STEP 4: Select All assests section - Success after attempt 1
+STEP 4: Select All assests section - Completed 1 attempts.
+Starting step: STEP 5: Click 'View all' button:, repetitions: 1
+STEP 5: Click 'View all' button: - Attempt 1/1
+STEP 5: Click 'View all' button: - Success after attempt 1
+STEP 5: Click 'View all' button: - Completed 1 attempts.
+Starting step: Assertion - checking if is actived Assets section:, repetitions: 1
+Assertion - checking if is actived Assets section: - Attempt 1/1
+Assertion - checking if is actived Assets section: - Success after attempt 1
+Assertion - checking if is actived Assets section: - Completed 1 attempts.
+Starting step: STEP 6: Close app, repetitions: 1
+STEP 6: Close app - Attempt 1/1
+STEP 6: Close app - Success after attempt 1
+STEP 6: Close app - Completed 1 attempts.
+Starting step: STEP 7: Move view from middle to right:, repetitions: 1
+STEP 7: Move view from middle to right: - Attempt 1/1
+STEP 7: Move view from middle to right: - Success after attempt 1
+STEP 7: Move view from middle to right: - Completed 1 attempts.
+Starting step: STEP 8: Click 'Clear all' button: , repetitions: 1
+STEP 8: Click 'Clear all' button:  - Attempt 1/1
+STEP 8: Click 'Clear all' button:  - Success after attempt 1
+STEP 8: Click 'Clear all' button:  - Completed 1 attempts.
