@@ -15,8 +15,8 @@ def load_test_files(config_path='test_cases_selection.ini'):
             flag = flag.strip().upper() if flag.strip() else 'N'  # Default to "N" if variable is empty
             config.set('tests', test_file, flag)  # Save the updated value to the config
 
-            # Check if the test should be run (marked with 'T')
-            if flag == 'T':
+            # Check if the test should be run (marked with 'Y-Yes')
+            if flag == 'Y':
                 test_files.append(os.path.join('tests', 'regression', test_file.strip()))
 
     # Save the modified configuration file
