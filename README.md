@@ -42,14 +42,14 @@ Tests are executed on physical Android devices as well as Android Studio emulato
   
   Mark tests with:
   
-    T – test will be executed
+    Y – test will be executed
     
     any other value / empty – test will be skipped
     
   Example:
   
     [tests]
-    test_TC_01_run_app.py = T
+    test_TC_01_run_app.py = Y
     test_TC_02_change_view.py = N
   
   4️⃣ Run selected tests
